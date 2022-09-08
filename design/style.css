@@ -1,0 +1,160 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Arial", sans-serif;
+}
+
+/*
+	=========
+	Навигация
+	=========
+*/
+
+.menu {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+}
+
+.menu-li {
+	display: inline-block;
+}
+
+.menu-a {
+	color: blue;
+	text-decoration: none;
+}
+
+.menu-a:hover {
+	color: red;
+}
+
+/*
+	==============
+	Основная часть
+	==============
+*/
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+section {
+	width: 700px;
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+aside {
+	width: 250px;
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+h2 {
+	text-align: center;
+}
+
+.choice {
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.choice-li {
+	margin: 10px;
+}
+
+.choice-a {
+	color: blue;
+	text-decoration: none;
+	font-size: 24px;
+}
+
+.choice-a:hover {
+	color: red;
+}
+
+/*
+	=======
+	Таблица
+	=======
+*/
+
+.table {
+
+	width: 100%;
+
+	border: none;
+
+	margin-bottom: 20px;
+
+}
+
+.table thead th {
+
+	font-weight: bold;
+
+	text-align: left;
+
+	border: none;
+
+	padding: 10px 15px;
+
+	background: #d8d8d8;
+
+	font-size: 14px;
+
+}
+
+.table thead tr th:first-child {
+
+	border-radius: 8px 0 0 8px;
+
+}
+
+.table thead tr th:last-child {
+
+	border-radius: 0 8px 8px 0;
+
+}
+
+.table tbody td {
+
+	text-align: left;
+
+	border: none;
+
+	padding: 10px 15px;
+
+	font-size: 14px;
+
+	vertical-align: top;
+
+}
+
+.table tbody tr:nth-child(even){
+
+	background: #f3f3f3;
+
+}
+
+.table tbody tr td:first-child {
+
+	border-radius: 8px 0 0 8px;
+
+}
+
+.table tbody tr td:last-child {
+
+	border-radius: 0 8px 8px 0;
+
+}
