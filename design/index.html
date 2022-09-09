@@ -4,175 +4,202 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BattleShip</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-<header>
-	<h1>BattleShip</h1>
-</header>
-<div class="container">
-	<section>
-		<nav>
-			<ul class="menu">
-				<li class="menu-li">
-					<a class="menu-a" href="#">Одиночная игра</a>
+	<header>
+		<h1>BattleShip</h1>
+	</header>
+	<div class="container">
+		<section>
+			<nav>
+				<ul class="menu">
+					<li class="menu-li">
+						<a class="menu-a" href="#">Одиночная игра</a>
+					</li>
+					<li class="menu-li">
+						<a class="menu-a" href="#">Многопользовательская игра</a>
+					</li>
+					<li class="menu-li">
+						<a class="menu-a" href="#">Рейтинг</a>
+					</li>
+					<li class="menu-li">
+						<a class="menu-a" href="#">Правила</a>
+					</li>
+					<li class="menu-li">
+						<a class="menu-a" href="#">Настройки</a>
+					</li>
+					<li class="menu-li">
+						<a class="menu-a" href="#">Выход</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="main">
+				<h2>Многопользовательская игра</h2>
+
+				<ul class="choice">
+					<li class="choice-li">
+						<a class="choice-a" href="#">Мои игры</a>
+					</li>
+					<li class="choice-li">
+						<a class="choice-a" href="#">Создать</a>
+					</li>
+					<li class="choice-li">
+						<a class="choice-a" href="#">Присоединиться</a>
+					</li>
+				</ul>
+
+				<h2>Рейтинг</h2>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>ZIP</th>
+							<th>Birthday</th>
+							<th>Points</th>
+							<th>Average</th>
+							<th>Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Gloria</td>
+							<td>Reeves</td>
+							<td>67439</td>
+							<td>10/18/1985</td>
+							<td>4</td>
+							<td>0.1</td>
+							<td>$50</td>
+						</tr>
+						<tr>
+							<td>Graham</td>
+							<td>Bonner</td>
+							<td>90727</td>
+							<td>12/07/1983</td>
+							<td>4</td>
+							<td>0.9</td>
+							<td>$90</td>
+						</tr>
+						<tr>
+							<td>Warren</td>
+							<td>Wheeler</td>
+							<td>99134</td>
+							<td>11/11/1984</td>
+							<td>2</td>
+							<td>0.7</td>
+							<td>$50</td>
+						</tr>
+						<tr>
+							<td>Zena</td>
+							<td>Hale</td>
+							<td>19803</td>
+							<td>06/17/1987</td>
+							<td>9</td>
+							<td>0.3</td>
+							<td>$90</td>
+						</tr>
+						<tr>
+							<td>Julia</td>
+							<td>Haupt</td>
+							<td>24116</td>
+							<td>03/15/1991</td>
+							<td>10</td>
+							<td>1.0</td>
+							<td>$40</td>
+						</tr>
+						<tr>
+							<td>Rachel</td>
+							<td>English</td>
+							<td>58951</td>
+							<td>02/25/1982</td>
+							<td>7</td>
+							<td>0.3</td>
+							<td>$20</td>
+						</tr>
+						<tr>
+							<td>Lionel</td>
+							<td>Barry</td>
+							<td>65036</td>
+							<td>02/17/1980</td>
+							<td>7</td>
+							<td>0.5</td>
+							<td>$50</td>
+						</tr>
+						<tr>
+							<td>Zena</td>
+							<td>Spears</td>
+							<td>16874</td>
+							<td>12/13/1981</td>
+							<td>5</td>
+							<td>0.6</td>
+							<td>$20</td>
+						</tr>
+						<tr>
+							<td>Dillon</td>
+							<td>Bradford</td>
+							<td>91543</td>
+							<td>01/20/1985</td>
+							<td>7</td>
+							<td>0.4</td>
+							<td>$100</td>
+						</tr>
+						<tr>
+							<td>Haley</td>
+							<td>Mcleod</td>
+							<td>99321</td>
+							<td>04/12/1980</td>
+							<td>4</td>
+							<td>0.1</td>
+							<td>$20</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Правила</h2>
+				<p>
+					Морской бой — игра для двух участников, в которой игроки по очереди называют координаты на неизвестной им карте соперника. Если у соперника по этим координатам имеется корабль (координаты заняты), то корабль или его часть «топится», а попавший получает право сделать ещё один ход. Цель игрока — первым потопить все корабли противника.
+				</p>
+				<p>
+					Подробные правила читать <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B9_%D0%B1%D0%BE%D0%B9_(%D0%B8%D0%B3%D1%80%D0%B0)">здесь</a>.
+				</p>
+			</div>
+		</section>
+		<aside>
+			<div class="avatar">
+				<img src="https://takamakiokerar.files.wordpress.com/2021/10/haruhibd0091.jpg" width="150px">
+			</div>
+			<div class="nickname">Никнейм</div>
+			<ul class="games">
+				<li class="game">
+					<ul class="game-data">
+						<li>Игра: <span class="game-number">1</span></li>
+						<li>Статус: <span class="game-status">ход противника</span></li>
+						<li><a class="game" href="#">Ссылка</a></li>
+					</ul>
 				</li>
-				<li class="menu-li">
-					<a class="menu-a" href="#">Многопользовательская игра</a>
+				<li class="game">
+					<ul class="game-data">
+						<li>Игра: <span class="game-number">2</span></li>
+						<li>Статус: <span class="game-status wait">ваш ход</span></li>
+						<li><a class="game" href="#">Ссылка</a></li>
+					</ul>
 				</li>
-				<li class="menu-li">
-					<a class="menu-a" href="#">Рейтинг</a>
-				</li>
-				<li class="menu-li">
-					<a class="menu-a" href="#">Правила</a>
-				</li>
-				<li class="menu-li">
-					<a class="menu-a" href="#">Настройки</a>
-				</li>
-				<li class="menu-li">
-					<a class="menu-a" href="#">Выход</a>
+				<li class="game">
+					<ul class="game-data">
+						<li>Игра: <span class="game-number">3</span></li>
+						<li>Статус: <span class="game-status">ход противника</span></li>
+						<li><a class="game" href="#">Ссылка</a></li>
+					</ul>
 				</li>
 			</ul>
-		</nav>
-		<div class="main">
-			<h2>Многопользовательская игра</h2>
-
-			<ul class="choice">
-				<li class="choice-li">
-					<a class="choice-a" href="#">Мои игры</a>
-				</li>
-				<li class="choice-li">
-					<a class="choice-a" href="#">Создать</a>
-				</li>
-				<li class="choice-li">
-					<a class="choice-a" href="#">Присоединиться</a>
-				</li>
-			</ul>
-
-			<h2>Рейтинг</h2>
-
-			<table class="table">
-				<thead>
-					<tr>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>ZIP</th>
-						<th>Birthday</th>
-						<th>Points</th>
-						<th>Average</th>
-						<th>Amount</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Gloria</td>
-						<td>Reeves</td>
-						<td>67439</td>
-						<td>10/18/1985</td>
-						<td>4</td>
-						<td>0.1</td>
-						<td>$50</td>
-					</tr>
-					<tr>
-						<td>Graham</td>
-						<td>Bonner</td>
-						<td>90727</td>
-						<td>12/07/1983</td>
-						<td>4</td>
-						<td>0.9</td>
-						<td>$90</td>
-					</tr>
-					<tr>
-						<td>Warren</td>
-						<td>Wheeler</td>
-						<td>99134</td>
-						<td>11/11/1984</td>
-						<td>2</td>
-						<td>0.7</td>
-						<td>$50</td>
-					</tr>
-					<tr>
-						<td>Zena</td>
-						<td>Hale</td>
-						<td>19803</td>
-						<td>06/17/1987</td>
-						<td>9</td>
-						<td>0.3</td>
-						<td>$90</td>
-					</tr>
-					<tr>
-						<td>Julia</td>
-						<td>Haupt</td>
-						<td>24116</td>
-						<td>03/15/1991</td>
-						<td>10</td>
-						<td>1.0</td>
-						<td>$40</td>
-					</tr>
-					<tr>
-						<td>Rachel</td>
-						<td>English</td>
-						<td>58951</td>
-						<td>02/25/1982</td>
-						<td>7</td>
-						<td>0.3</td>
-						<td>$20</td>
-					</tr>
-					<tr>
-						<td>Lionel</td>
-						<td>Barry</td>
-						<td>65036</td>
-						<td>02/17/1980</td>
-						<td>7</td>
-						<td>0.5</td>
-						<td>$50</td>
-					</tr>
-					<tr>
-						<td>Zena</td>
-						<td>Spears</td>
-						<td>16874</td>
-						<td>12/13/1981</td>
-						<td>5</td>
-						<td>0.6</td>
-						<td>$20</td>
-					</tr>
-					<tr>
-						<td>Dillon</td>
-						<td>Bradford</td>
-						<td>91543</td>
-						<td>01/20/1985</td>
-						<td>7</td>
-						<td>0.4</td>
-						<td>$100</td>
-					</tr>
-					<tr>
-						<td>Haley</td>
-						<td>Mcleod</td>
-						<td>99321</td>
-						<td>04/12/1980</td>
-						<td>4</td>
-						<td>0.1</td>
-						<td>$20</td>
-					</tr>
-				</tbody>
-			</table>
-
-			<h2>Правила</h2>
-			<p>
-				Морской бой — игра для двух участников, в которой игроки по очереди называют координаты на неизвестной им карте соперника. Если у соперника по этим координатам имеется корабль (координаты заняты), то корабль или его часть «топится», а попавший получает право сделать ещё один ход. Цель игрока — первым потопить все корабли противника.
-			</p>
-			<p>
-				Подробные правила читать <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B9_%D0%B1%D0%BE%D0%B9_(%D0%B8%D0%B3%D1%80%D0%B0)">здесь</a>.
-			</p>
-		</div>
-	</section>
-	<aside>
-		<img src="https://takamakiokerar.files.wordpress.com/2021/10/haruhibd0091.jpg?w=1200" width="150px">
-		<p>Никнейм</p>
-		<p>Игра 1</p>
-		<p>Игра 2</p>
-		<p>Игра 3</p>
-	</aside>
-</div>
+		</aside>
+	</div>
+	<footer>
+		<div class="company">super puper team</div>
+		<div class="devs">Даниил, Денис, Дмитрий, Роман</div>
+		<div class="description">2022, ол райтс ризёрвд</div>
+	</footer>
 </body>
 </html>
