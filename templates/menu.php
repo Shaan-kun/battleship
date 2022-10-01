@@ -15,6 +15,6 @@
 		<a class="menu-a" href="plug.php">Настройки</a>
 	</li>
 	<li class="menu-li">
-		<a class="menu-a" href="plug.php">Выход</a>
+		<a class="menu-a" href="php/vendor/logout.php">Выход</a>
 	</li>
 </ul>

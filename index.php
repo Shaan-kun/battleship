@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+	<?php header('Location: php/index.php'); ?>
 	<header>
 		<h1>BattleShip</h1>
 	</header>

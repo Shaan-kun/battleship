@@ -4,28 +4,33 @@
     require_once 'connect.php';
 
     $login = $_POST['login'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
 
-    $check_user = mysqli_query($connect, "SELECT * FROM `user` WHERE `login` = '$login' AND `password` = '$password'");
-    if (mysqli_num_rows($check_user) > 0) {
+    $check_user = mysqli_query($connect, "SELECT * FROM User WHERE login = '$login' AND password = '$password'");
+
+    if (mysqli_num_rows($check_user) > 0)
+    {
 
         $user = mysqli_fetch_assoc($check_user);
 
         $_SESSION['user'] = [
-            "id" => $user['id'],
+            'user_id' => $user['user_id'],
+            'login' => $user['login'],
+            'email' => $user['email'],
+            'reg_date' => $user['reg_date'],
+            'avatar' => $user['avatar'],
+            'description' => $user['description'],
+            'game_count' => $user['game_count'],
+            'game_win' => $user['game_win'],
+            'game_loss' => $user['game_loss'],
+            'score' => $user['score'],
         ];
 
-        header('Location: ../profile.php');
+        header('Location: ../../rating.php');
 
-    } else {
-        $_SESSION['message'] = 'Не верный логин или пароль';
+    }
+    else
+    {
+        $_SESSION['message'] = 'Неверный логин или пароль!';
         header('Location: ../index.php');
     }
-    ?>
-
-<pre>
-    <?php
-    print_r($check_user);
-    print_r($user);
-    ?>
-</pre>
