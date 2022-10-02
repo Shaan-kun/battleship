@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Мы поражены твоей неудачей</title>
-    <link rel="stylesheet" href="other/main.css">
+    <link rel="stylesheet" href="styles/reg.css">
 </head>
 <body>
     <form>
-        <img src='other/abc.jpeg'>
+        <img src='images/abc.jpeg'>
         <a href='index.php'>назад</a>
     </form>
 </body>

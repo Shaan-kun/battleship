@@ -3,10 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<title>Упс!</title>
-	<!--
-	<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
-	-->
-	<link rel="stylesheet" href="../css/plug.css">
+	<!-- <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png"> -->
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		.container {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">

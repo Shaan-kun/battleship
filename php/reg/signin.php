@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    require_once 'connect.php';
+    require_once '../connect.php';
 
     $login = $_POST['login'];
     $password = md5($_POST['password']);
@@ -26,11 +26,11 @@
             'score' => $user['score'],
         ];
 
-        header('Location: ../../rating.php');
+        header('Location: ../../index.php');
 
     }
     else
     {
         $_SESSION['message'] = 'Неверный логин или пароль!';
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
     }

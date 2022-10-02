@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    require_once 'connect.php';
+    require_once '../connect.php';
 
     $login = $_POST['login'];
     $email = $_POST['email'];
@@ -11,21 +11,17 @@
     if ($password !== $password_confirm)
     {
         $_SESSION['message'] = 'Пароли не совпадают!';
-        header('Location: ../reg.php');
+        header('Location: ../../reg.php');
     }
     else
     {
         $path = '../../images/avatars/'; // путь для сохранения аватарок
         $avatar = time() . '.' . pathinfo($_FILES['avatar']['name'],  PATHINFO_EXTENSION); // даём аватарке уникальное имя
 
-        echo $path . '<br>';
-        echo $avatar . '<br>';
-
-
         if (!move_uploaded_file($_FILES['avatar']['tmp_name'], $path . $avatar))
         {
            $_SESSION['message'] = 'Ошибка при загрузке сообщения';
-           header('Location: ../reg.php');
+           header('Location: ../../reg.php');
         }
 
         $password = md5($password); // хэшируем пароль
@@ -40,5 +36,5 @@
         mysqli_query($connect, $query);
 
         $_SESSION['message'] = 'Регистрация прошла успешно!';
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
     }

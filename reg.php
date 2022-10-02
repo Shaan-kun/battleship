@@ -3,7 +3,7 @@
 
     if (isset($_SESSION['user']))
     {
-        header('Location: ../rating.php');
+        header('Location: rating.php');
     }
 ?>
 
@@ -12,18 +12,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
-    <link rel="stylesheet" href="other/main.css">
+    <link rel="stylesheet" href="styles/reg.css">
 </head>
 <body>
     <!--Форма Регистрации -->
-    <form action="vendor/signup.php" method="post" enctype="multipart/form-data">
+    <form action="php/reg/signup.php" method="post" enctype="multipart/form-data">
         <label>Логин</label>
         <input type="text" name="login" placeholder="Введите свой логин">
 
         <label>Почта</label>
         <input type="email" name="email" placeholder="Введите электронную почту">
 
-        <!-- <input type="hidden" name="MAX_FILE_SIZE" value="30000" /> ограничение на размер файла -->
+        <!-- Ограничение на размер файла. Лучше задавать его в настройках сервера. -->
+        <!-- <input type="hidden" name="MAX_FILE_SIZE" value="30000" /> -->
         <label>Изображение профиля</label>
         <input type="file" name="avatar"> 
 
@@ -36,7 +37,7 @@
         <button type="submit">Создать аккаунт</button>
         
         <p>
-            Уже есть аккаунт? <a href='index.php'>Авторизируйтесь</a>!
+            Уже есть аккаунт? <a href='auth.php'>Авторизируйтесь</a>!
         </p>
         
         <?php
