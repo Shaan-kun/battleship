@@ -4,7 +4,7 @@ CREATE TABLE User (
 	password VARCHAR(32),
 	email VARCHAR(32),
 	reg_date DATETIME DEFAULT "1970-01-01 00:00:00",
-	avatar VARCHAR(256),
+	avatar VARCHAR(256) DEFAULT "user.png",
 	description VARCHAR(300),
 	game_count INT DEFAULT 0,
 	game_win INT DEFAULT 0,
