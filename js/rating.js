@@ -7,7 +7,7 @@ function get_rating(users) {
 	for (let user of users) {
 		let row = document.createElement('tr');
 
-		// fiel - поле (столбец)
+		// field - поле (столбец)
 		for (let field in user) {
 			let column = document.createElement('td');
 			column.innerHTML = user[field];
@@ -24,7 +24,7 @@ function get_rating(users) {
 // функция делает GET-запрос и обновляет таблицу рейтинга
 function update_table() {
 	let xhr = new XMLHttpRequest();
-	xhr.open('GET', "php/rating_test.php");
+	xhr.open('GET', "php/game/get_users.php");
 	xhr.responseType = 'json';
 	xhr.send();
 

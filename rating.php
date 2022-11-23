@@ -7,6 +7,7 @@
 <table class="table">
 	<thead>
 		<tr>
+			<th>ID</th>
 			<th>Логин</th>
 			<th>Дата регистрации</th>
 			<th>Всего игр</th>
