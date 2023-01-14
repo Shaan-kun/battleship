@@ -9,7 +9,7 @@
 	
 	session_start();
 
-	$DEBUG = true; // на релизе изменить на false
+	$DEBUG = false; // на релизе изменить на false
 
 
 	function get_files_map($dir='') {
@@ -88,7 +88,7 @@
 	}
 	else {
 	    if (isset($_SESSION['user']))
-	    {
 	        header('Location: rating.php');
-	    }
+	    else
+	    	header('Location: auth.php');
     }

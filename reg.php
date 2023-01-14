@@ -12,11 +12,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
-    <link rel="stylesheet" href="styles/reg.css">
+    <link rel="stylesheet" href="styles/auth.css">
 </head>
 <body>
     <!--Форма Регистрации -->
-    <form action="php/reg/signup.php" method="post" enctype="multipart/form-data">
+    <form action="php/auth/signup.php" method="post" enctype="multipart/form-data">
         <label>Логин</label>
         <input type="text" name="login" placeholder="Введите свой логин">
 

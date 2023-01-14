@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Мы поражены твоей неудачей</title>
-    <link rel="stylesheet" href="styles/reg.css">
+    <link rel="stylesheet" href="styles/auth.css">
 </head>
 <body>
     <form>

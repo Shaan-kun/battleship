@@ -38,7 +38,7 @@
 						<a class="menu-a" href="plug.php">Настройки</a>
 					</li>
 					<li class="menu-li">
-						<a class="menu-a" href="php/reg/logout.php">Выход</a>
+						<a class="menu-a" href="php/auth/logout.php">Выход</a>
 					</li>
 				</ul>
 			</nav>
