@@ -1,9 +1,4 @@
-<?php
-	$title = 'Рейтинг';
-
-	include 'templates/header.php'; 
-?>
-
+<link rel="stylesheet" type="text/css" href="styles/rating.css">
 <table class="table">
 	<thead>
 		<tr>
@@ -21,4 +16,3 @@
 </table>
 <script src="js/rating.js"></script>
 
-<?php include 'templates/footer.php'; ?>
