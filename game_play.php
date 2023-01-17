@@ -1,66 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sea Battle</title>
-		<link rel="stylesheet" type="text/css" href="styles/game_play.css">
-	</head>
-	<body>
-		<div class="app">
-			<div class="app-header">
-				<h1 class="app-title">Морской бой</h1>
-				<span class="app-subtitle"
-					>Проект школы программирования
-					<a href="https://constcode.ru" class="app-link" target="_blank"
-						>ConstCode.ru</a
-					></span
-				>
-			</div>
-			<div class="app-body">
-				<div data-side="player"></div>
-				<div class="app-menu">
-					<div class="app-actions" data-scene="preparation">
-						<button class="app-action" data-computer="simple" disabled>
-							Играть против слабока
-						</button>
-						<button class="app-action" data-computer="middle" disabled>
-							Играть против среднего
-						</button>
-						<button class="app-action" data-computer="hard" disabled>
-							Играть против сильного
-						</button>
-						<button class="app-action" data-type="random" disabled>
-							Играть против случайного игрока
-						</button>
-						<button class="app-action" data-type="challenge" disabled>
-							Вызвать на бой
-						</button>
-						<button class="app-action" data-action="manually">
-							Расставить корабли вручную
-						</button>
-						<button class="app-action" data-action="randomize">
-							Расставить корабли случайно
-						</button>
-					</div>
-				</div>
-				<div data-side="opponent"></div>
-			</div>
-		</div>
+<body>
+	
 
-		<script src="src/additional.js"></script>
-		<script src="src/Mouse.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/game_play.css">
+	<link rel="stylesheet" type="text/css" href="styles/game_play_2.css">
+	<div class = "table_first">
+		<table class = "table">
+			<tbody class = "game-tbody">
+			</tbody>
+		</table>
+	</div>
+	<div class = "table_second">
+		<table class = "table_2">
+			<tbody class = "game-tbody_2">
+			</tbody>
+		</table>
+	</div>
+	<script src="js/game_play_1.js"></script>
 
-		<script src="src/Application.js"></script>
-		<script src="src/Scene.js"></script>
-		<script src="src/scenes/PreparationScene.js"></script>
-
-		<script src="src/Battlefield.js"></script>
-		<script src="src/BattlefieldView.js"></script>
-
-		<script src="src/Ship.js"></script>
-		<script src="src/ShipView.js"></script>
-
-		<script src="src/script.js"></script>
-	</body>
-</html>
+	<script src = "js/addEventListener.js"></script>
+	<script src = "js/ships.js"></script>
+</body>

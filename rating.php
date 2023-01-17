@@ -22,7 +22,7 @@
 </table>
 <script src="js/rating.js"></script>
 
-</form>
+
 
 <?php include 'templates/footer.php'; ?>
 

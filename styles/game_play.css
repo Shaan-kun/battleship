@@ -1,0 +1,32 @@
+.table{
+    width: 100%;
+
+
+}
+.table tbody{
+    background-color: #97e5fc;
+}
+.table{
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.game-td{
+    width: 35px;
+    height: 35px;
+}
+
+.marker-row {
+    text-align: center;
+    margin-left: -60px;
+    margin-top: 10px;
+}
+
+.marker-column {
+    text-align: center;
+    margin-top: -40px;
+}
+
+.table_first{
+    width: 500px;
+}
