@@ -1,10 +1,11 @@
 <?php
-	$title = 'Рейтинг';
+	$title = 'Рейтинг игроков';
 
 	include 'templates/header.php'; 
 ?>
 
-<table class="table">
+
+<table class = "table">
 	<thead>
 		<tr>
 			<th>ID</th>
@@ -16,9 +17,12 @@
 			<th>Счёт</th>
 		</tr>
 	</thead>
-	<tbody>
+	<tbody class = "rating-tbody">
 	</tbody>
 </table>
 <script src="js/rating.js"></script>
 
+
+
 <?php include 'templates/footer.php'; ?>
+

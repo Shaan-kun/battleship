@@ -1,7 +1,6 @@
-function get_rating(users)
+function get_games(users)
 {
     const $tableBody = document.createElement('tbody');
-    $tableBody.className = "rating-tbody";
 
     for(let user of users)
     {
@@ -14,7 +13,9 @@ function get_rating(users)
 
             $tr.append($td);
         }
-
+        let $td = document.createElement('td');
+        $td.textContent = "Join";
+        $tr.append($td);
 
         $tableBody.append($tr);
 
@@ -26,14 +27,14 @@ function get_rating(users)
 
 function update_table() {
 	let xhr = new XMLHttpRequest();
-	xhr.open('GET', "php/game/get_users.php");
+	xhr.open('GET', "php/game/get_games.php");
 	xhr.responseType = 'json';
 	xhr.send();
 
 	xhr.onload = function() {
 		let users = xhr.response;
-		let tbody = document.querySelector(".rating-tbody");
-		tbody.replaceWith(get_rating(users));
+		let tbody = document.querySelector('tbody');
+		tbody.replaceWith(get_games(users));
 	};
 
 

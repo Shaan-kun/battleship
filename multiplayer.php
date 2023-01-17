@@ -9,9 +9,6 @@
 		<a class="choice-a" href="my_games.php">Мои игры</a>
 	</li>
 	<li class="choice-li">
-		<a class="choice-a" href="create.php">Создать</a>
-	</li>
-	<li class="choice-li">
 		<a class="choice-a" href="join.php">Присоединиться</a>
 	</li>
 </ul>
