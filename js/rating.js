@@ -1,6 +1,7 @@
 function get_rating(users)
 {
     const $tableBody = document.createElement('tbody');
+    $tableBody.className = "rating-tbody";
 
     for(let user of users)
     {
@@ -13,9 +14,7 @@ function get_rating(users)
 
             $tr.append($td);
         }
-        let $td = document.createElement('td');
-        $td.textContent = "Join";
-        $tr.append($td);
+
 
         $tableBody.append($tr);
 
@@ -33,7 +32,7 @@ function update_table() {
 
 	xhr.onload = function() {
 		let users = xhr.response;
-		let tbody = document.querySelector('tbody');
+		let tbody = document.querySelector(".rating-tbody");
 		tbody.replaceWith(get_rating(users));
 	};
 

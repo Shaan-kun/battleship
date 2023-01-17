@@ -1,4 +1,10 @@
-<link rel="stylesheet" type="text/css" href="styles/games.css">
+<?php
+	$title = 'Игры';
+
+	include 'templates/header.php'; 
+?>
+
+
 <h2>Список игр</h2>
 <table class="table">
 	<thead>
@@ -13,3 +19,7 @@
 	</tbody>
 </table>
 <script src = "js/games.js"></script>
+
+</form>
+
+<?php include 'templates/footer.php'; ?>
