@@ -232,6 +232,11 @@ footer {
 	=========
 */
 
+body {
+	background: #111115;
+	color: white;
+}
+
 .chat {
 	max-width: 150px;
 	max-height: 350px;
@@ -239,10 +244,11 @@ footer {
 }
 
 .message {
-	background-color: #def;
+	background-color: #123;
 	padding: 10px;
 	margin-bottom: 14px;
 	border-radius: 10px;
+
 }
 
 .time {

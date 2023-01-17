@@ -28,6 +28,29 @@
 					</ul>
 				</li>
 			</ul>
+			<div class="chat">
+				<?php
+					if (!isset($_SESSION['user']))
+					{
+						echo "ЧАТ НЕДОСТУПЕН";
+					}
+					else
+					{
+						foreach ($messages as $msg)
+						{
+							echo '<div class="message">';
+							echo '<div class="time">' . date("d.m.Y H:i", $msg['time']) . '</div>';
+							echo '<div class="login">' . $msg['login'] . '</div>';
+							echo '<div class="message-text">' . $msg['message'] . '</div>';
+							echo '</div>';
+						}
+					}
+				?>
+			</div>
+			<form method="POST">
+				<input type="text" name="user_message">
+				<input type="submit">
+			</form>
 		</aside>
 	</div>
 	<footer>
