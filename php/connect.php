@@ -5,8 +5,9 @@
     $password = '';
     $database = 'battleship';
 
-    $connect = mysqli_connect($host, $user, $password, $database);
+    $connect = new mysqli($host, $user, $password, $database);
 
-    if (!$connect) {
+    if ($connect->connect_error)
+    {
         die('Error connect to DataBase');
     }

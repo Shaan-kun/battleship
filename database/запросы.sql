@@ -46,8 +46,8 @@ CREATE TABLE Ship (
 CREATE TABLE Cell (
 	cell_id INT PRIMARY KEY AUTO_INCREMENT,
 	ship_id INT NOT NULL,
-	axis_x VARCHAR(2) CHECK(axis_x != ''),
-	axis_y VARCHAR(2) CHECK(axis_y != ''),
+	axis_x VARCHAR(2) NOT NULL,
+	axis_y VARCHAR(2) NOT NULL,
 	is_hit BOOL DEFAULT FALSE,
 	FOREIGN KEY (ship_id) REFERENCES Ship (ship_id) ON DELETE CASCADE
 );
@@ -61,14 +61,25 @@ CREATE TABLE Shot (
 	UNIQUE(player_id, axis_x, axis_y)
 );
 
+-- типы кораблей
+
+INSERT INTO
+	Type(type_id, name, hp)
+VALUES
+	(1, 'линкор', 4),
+	(2, 'крейсер', 3),
+	(3, 'эсминец', 2),
+	(4, 'торпедный катер', 1);
+
 
 -- тестовые данные
 
+-- пароль совпадает с логином
 INSERT INTO
-	User(login, password, email, reg_date)
+	User(login, password, reg_date)
 VALUES
-	('nagibator', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'nagibator@battleship.ru', '2022-11-23 19:14:52'),
-	('Dominator', '202cb962ac59075b964b07152d234b7', 'dominator@battleship.ru', '2022-11-23 19:15:28');
+	('nagibator', 'c7de91b186b220b026c590ebb4306d6c', '2022-11-23 19:14:52'),
+	('Dominator', '53dd6b930ddc5060576d038d0a139804', '2022-11-23 19:15:28');
 
 INSERT INTO
 	Game(start_date)
@@ -83,3 +94,41 @@ VALUES
 	(1, 1),
 	(2, 2),
 	(2, 3);
+
+INSERT INTO
+	Ship(type_id, player_id)
+VALUES
+	(1, 1),
+	(2, 1),
+	(2, 1),
+	(3, 1),
+	(3, 1),
+	(3, 1),
+	(4, 1),
+	(4, 1),
+	(4, 1),
+	(4, 1);
+
+INSERT INTO
+	Cell(ship_id, axis_x, axis_y)
+VALUES
+	(1, 'Г', '3'),
+	(1, 'Г', '4'),
+	(1, 'Г', '5'),
+	(1, 'Г', '6'),
+	(2, 'Д', '1'),
+	(2, 'Е', '1'),
+	(2, 'Ж', '1'),
+	(3, 'Ж', '10'),
+	(3, 'З', '10'),
+	(3, 'И', '10'),
+	(4, 'Б', '2'),
+	(4, 'Б', '3'),
+	(5, 'З', '4'),
+	(5, 'З', '5'),
+	(6, 'В', '8'),
+	(6, 'Г', '8'),
+	(7, 'Б', '5'),
+	(8, 'А', '8'),
+	(9, 'И', '7'),
+	(10, 'Д', '10');
