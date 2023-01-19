@@ -1,25 +1,23 @@
 class myObject {
     constructor(type) {
 
-       
-       
-       // hero
-       if(type == "ship") {
-       
-       this.width = 40;
-       this.height = 40;
-       this.backgroundimage = "url(images/ship.png)";
-       this.bottom = 102;
-       this.left = 40;
-       this.backgroundsize = "contain";
-       this.position = "absolute";
-       this.id = "";
-       this.angle = 0;
-       this.type = "ship";
+       if(type == "ship") 
+       {
+            this.width = 40;
+            this.height = 40;
+            this.backgroundimage = "url(images/ship.png)";
+            this.bottom = 102;
+            this.left = 40;
+            this.backgroundsize = "contain";
+            this.position = "absolute";
+            this.id = "";
+            this.angle = 0;
+            this.type = "ship";
+            this.active = false; // передвигаем ли он по кнопке сейчас
+        } 
 
-       } 
     }
-
+    
    myRender() {
     
        let d=document.createElement('div');
@@ -31,9 +29,10 @@ class myObject {
        d.style.backgroundSize = this.backgroundsize;
        d.style.position = this.position;
        d.style.transform = this.angle;
+       d.id = this.id;
        document.body.appendChild(d);
-
    }
+
 
    
 

@@ -57,3 +57,8 @@ function update_table_2() {
 	};
 
 update_table_2();
+
+function get_row()
+{
+    return row;
+}
