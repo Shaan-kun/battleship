@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function(){ 
 {
     let ships = [];
@@ -41,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function(){
         ship.bottom = 50;
         ships.push(ship);
         ship.myRender();
-
     }
 });
+
+

@@ -1,17 +1,54 @@
-.table{
-    width: 100%;
 
-
+.container{ 
+    display:flex;
 }
-.table tbody{
+
+            /*                     */
+            /* Левая таблица игрока*/
+            /*                     */
+
+.table_1 tbody{
     background-color: #97e5fc;
 }
-.table{
+.table_1{
     margin-top: 50px;
-    margin-left: 150px;
+    margin-left: 180px;
+    width: 350px;
+    height: 350px;
+    display: inline-block;
 }
 
+            /*                         */
+            /* Правая таблица соперника*/
+            /*                         */
+.table_2{
+    margin-top: 50px;
+    margin-left: 400px;
+    width: 350px;
+    height: 350px;
+    display: inline-block;
+}
+
+.table_2 tbody{
+    background-color: #97e5fc;
+}
+.game-tbody_2{
+    width: 300px;
+    height: 300px;
+
+}
+
+
+            /*        */
+            /* Маркеры*/
+            /*        */
+
+
 .game-td{
+    width: 35px;
+    height: 35px;
+}
+.game-td2{
     width: 35px;
     height: 35px;
 }
@@ -27,6 +64,21 @@
     margin-top: -40px;
 }
 
-.table_first{
-    width: 500px;
+
+
+
+/*
+.table_2 tbody{
+    background-color: #97e5fc;
 }
+.table_2{
+    margin-top: 100px;
+    margin-left: 400px;
+    vertical-align: top;
+}
+
+.table_second{
+    float: right;
+}
+
+*/

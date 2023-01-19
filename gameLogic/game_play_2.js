@@ -1,8 +1,8 @@
-function get_table()
+function get_table_2() //Вторая таблица соперника
 {
-    cells = []; // тут все ячейки в таблице
+    cells2 = []; // тут все ячейки в таблице
     const $tableBody = document.createElement('tbody');
-    $tableBody.className = "game-tbody";
+    $tableBody.className = "game-tbody_2";
 
     for(let y = 0; y<10;y++)
     {
@@ -13,7 +13,7 @@ function get_table()
         for (let x=0;x<10;x++)
         {
             const $td = document.createElement('td');
-            $td.className = "game-td";
+            $td.className = "game-td2";
             $td.dataset.y=y;
             $td.dataset.x=x;
 
@@ -21,13 +21,13 @@ function get_table()
             row.push($td);
         }
 
-        cells.push(row);
+        cells2.push(row);
         $tableBody.append($tr);
 
     }
 
     for (let x = 0; x < 10; x++) {
-        const cell = cells[0][x];
+        const cell = cells2[0][x];
         const marker = document.createElement("div");
 
         marker.classList.add("marker", "marker-column");
@@ -37,7 +37,7 @@ function get_table()
     }
 
     for (let y = 0; y < 10; y++) {
-        const cell = cells[y][0];
+        const cell = cells2[y][0];
         const marker = document.createElement("div");
 
         marker.classList.add("marker", "marker-row");
@@ -51,8 +51,9 @@ function get_table()
 
 
 }
-function update_table() {
-		let tbody = document.querySelector(".game-tbody");
-		tbody.replaceWith(get_table());
+function update_table_2() {
+		let tbody = document.querySelector(".game-tbody_2");
+		tbody.replaceWith(get_table_2());
 	};
-update_table();
+
+update_table_2();
