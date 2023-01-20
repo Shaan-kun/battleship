@@ -12,7 +12,7 @@
 	
 </head>
 <body>
-	<link rel="stylesheet" type="text/css" href="styles/game_play.css">
+	<link rel="stylesheet" type="text/css" href="gameLogic.css">
 
 		<table class = "table_1">
 			<tbody class = "game-tbody"></tbody>

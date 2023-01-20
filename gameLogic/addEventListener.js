@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function(){
         boats[i].myRender();
     }
 
-    add_move();
 });
 
 
