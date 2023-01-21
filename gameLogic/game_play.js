@@ -1,6 +1,5 @@
 function get_table()
 {
-    cells = []; // тут все ячейки в таблице
     const $tableBody = document.createElement('tbody');
     $tableBody.className = "game-tbody";
 
