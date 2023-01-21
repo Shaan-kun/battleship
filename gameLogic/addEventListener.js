@@ -191,29 +191,17 @@ function check_zanyato(pos_x1,pos_y1)
         if((eto_x == pos_x1+1 && eto_y == pos_y1) || (eto_x == pos_x1-1 && eto_y == pos_y1) || (eto_x == pos_x1 && eto_y == pos_y1-1) || (eto_x == pos_x1 && eto_y == pos_y1+1)
         || (eto_x == pos_x1+1 && eto_y == pos_y1+1) || (eto_x == pos_x1-1 && eto_y == pos_y1-1) || (eto_x == pos_x1+1 && eto_y == pos_y1-1) || (eto_x == pos_x1-1 && eto_y == pos_y1+1))
         {
-            console.log(eto_x);
-            console.log(eto_y);
-            tab.className = "game-td-zanyato";
+
+            //tab.className = "game-td-zanyato";
+            if(Number(tab.getAttribute('data-z') != 1))
+            {
+               tab.setAttribute('data-z',4); 
+            }
+            
         }
     });
 }
 
-// function check_zanyato2(pos_x1,pos_y1)
-// {
-//     let tabs = document.querySelectorAll('.game-td');
-//     tabs.forEach((tab) =>
-//     {
-//         let eto_x = tab.getAttribute('data-x');
-//         let eto_y = tab.getAttribute('data-y');
-//         if((eto_x == pos_x1+1 && eto_y == pos_y1) || (eto_x == pos_x1-1 && eto_y == pos_y1) || (eto_x == pos_x1 && eto_y == pos_y1-1) || (eto_x == pos_x1 && eto_y == pos_y1+1)
-//         || (eto_x == pos_x1+1 && eto_y == pos_y1+1) || (eto_x == pos_x1-1 && eto_y == pos_y1-1) || (eto_x == pos_x1+1 && eto_y == pos_y1-1) || (eto_x == pos_x1-1 && eto_y == pos_y1+1))
-//         {
-//             console.log(eto_x);
-//             console.log(eto_y);
-//             tab.className = "game-td-zanyato";
-//         }
-//     });
-// }
 
 
 canMove = true;
@@ -227,13 +215,14 @@ function game(){
             tab_my.addEventListener('click', function () 
             {
                 const nameClass = tab_my.className;
-                if(nameClass == "game-td" && canMove && count ==1)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count ==1)
                 {   
                     pos_x1 = tab_my.getAttribute('data-x');
                     pos_y1 = tab_my.getAttribute('data-y');
                     pos_x1 = Number(pos_x1);
                     pos_y1 = Number(pos_y1);
-                    tab_my.className = "game-td-green";
+                    tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                     count = count + 1;
                     check_zanyato(pos_x1,pos_y1);
                     game();
@@ -254,13 +243,14 @@ function game(){
             tab_my.addEventListener('click', function () 
             {
                 const nameClass = tab_my.className;
-                if(nameClass == "game-td" && canMove && count ==2)
+                if(Number(tab_my.getAttribute('data-z'))==0 && canMove && count ==2 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x1 = tab_my.getAttribute('data-x');
                     pos_y1 = tab_my.getAttribute('data-y');
                     pos_x1 = Number(pos_x1);
                     pos_y1 = Number(pos_y1);
-                    tab_my.className = "game-td-green";
+                    tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                     count = count + 1;
                     check_zanyato(pos_x1,pos_y1);
                     game();
@@ -279,13 +269,14 @@ function game(){
             tab_my.addEventListener('click', function () 
             {
                 const nameClass = tab_my.className;
-                if(nameClass == "game-td" && canMove && count ==3)
+                if(Number(tab_my.getAttribute('data-z'))==0 && canMove && count ==3 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x1 = tab_my.getAttribute('data-x');
                     pos_y1 = tab_my.getAttribute('data-y');
                     pos_x1 = Number(pos_x1);
                     pos_y1 = Number(pos_y1);
-                    tab_my.className = "game-td-green";
+                    tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                     count = count + 1;
                     check_zanyato(pos_x1,pos_y1);
                     game();
@@ -306,13 +297,14 @@ function game(){
             tab_my.addEventListener('click', function () 
             {
                 const nameClass = tab_my.className;
-                if(nameClass == "game-td" && canMove && count ==4)
+                if(Number(tab_my.getAttribute('data-z'))==0 && canMove && count ==4 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x1 = tab_my.getAttribute('data-x');
                     pos_y1 = tab_my.getAttribute('data-y');
                     pos_x1 = Number(pos_x1);
                     pos_y1 = Number(pos_y1);
-                    tab_my.className = "game-td-green";
+                    tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                     count = count + 1;
                     check_zanyato(pos_x1,pos_y1);
                     game();
@@ -336,17 +328,18 @@ function game(){
             tab_my.addEventListener('click', function () 
             {
                 let nameClass = tab_my.className;
-                if(nameClass == "game-td" && canMove && count ==5)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count ==5 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x1 = tab_my.getAttribute('data-x');
                     pos_y1 = tab_my.getAttribute('data-y');
                     pos_x1 = Number(pos_x1);
                     pos_y1 = Number(pos_y1);
-                    tab_my.className = "game-td-green";
+                    tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                     count = count + 1;
                     game();
                 }
-                if(nameClass == "game-td" && canMove && count == 6)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count == 6 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x2 = tab_my.getAttribute('data-x');
                     pos_y2 = tab_my.getAttribute('data-y');
@@ -356,7 +349,8 @@ function game(){
                     if((pos_x2 == pos_x1 -1 && pos_y2 == pos_y1) || (pos_x2 == pos_x1 +1 && pos_y2 == pos_y1)
                         || (pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1))
                     {
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                        tab_my.style.background = "green";
                         check_zanyato(pos_x1,pos_y1);
                         check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
@@ -379,26 +373,29 @@ function game(){
             tab_my.addEventListener('click', function () 
             {
                 let nameClass = tab_my.className;
-                if(nameClass == "game-td" && canMove && count ==7)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count ==7 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x1 = tab_my.getAttribute('data-x');
                     pos_y1 = tab_my.getAttribute('data-y');
                     pos_x1 = Number(pos_x1);
                     pos_y1 = Number(pos_y1);
-                    tab_my.className = "game-td-green";
+                    tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                     count = count + 1;
                     game();
                 }
-                if(nameClass == "game-td" && canMove && count == 8)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count == 8 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x2 = tab_my.getAttribute('data-x');
                     pos_y2 = tab_my.getAttribute('data-y');
                     pos_x2 = Number(pos_x2);
                     pos_y2 = Number(pos_y2);
+
                     if((pos_x2 == pos_x1 -1 && pos_y2 == pos_y1) || (pos_x2 == pos_x1 +1 && pos_y2 == pos_y1)
                         || (pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1))
                     {
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                        tab_my.style.background = "green";
                         check_zanyato(pos_x1,pos_y1);
                         check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
@@ -421,17 +418,18 @@ function game(){
             tab_my.addEventListener('click', function () 
             {
                 let nameClass = tab_my.className;
-                if(nameClass == "game-td" && canMove && count ==9)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count ==9 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x1 = tab_my.getAttribute('data-x');
                     pos_y1 = tab_my.getAttribute('data-y');
                     pos_x1 = Number(pos_x1);
                     pos_y1 = Number(pos_y1);
-                    tab_my.className = "game-td-green";
+                    tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                     count = count + 1;
                     game();
                 }
-                if(nameClass == "game-td" && canMove && count == 10)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count == 10 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x2 = tab_my.getAttribute('data-x');
                     pos_y2 = tab_my.getAttribute('data-y');
@@ -440,7 +438,8 @@ function game(){
                     if((pos_x2 == pos_x1 -1 && pos_y2 == pos_y1) || (pos_x2 == pos_x1 +1 && pos_y2 == pos_y1)
                         || (pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1))
                     {
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         check_zanyato(pos_x1,pos_y1);
                         check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
@@ -462,17 +461,18 @@ function game(){
             tab_my.addEventListener('click', function () 
             {
                 let nameClass = tab_my.className;
-                if(nameClass == "game-td" && canMove && count ==11)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count ==11 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x1 = tab_my.getAttribute('data-x');
                     pos_y1 = tab_my.getAttribute('data-y');
                     pos_x1 = Number(pos_x1);
                     pos_y1 = Number(pos_y1);
-                    tab_my.className = "game-td-green";
+                    tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                     count = count + 1;
                     game();
                 }
-                if(nameClass == "game-td" && canMove && count == 12)
+                if(nameClass == "game-td" && canMove && count == 12&&Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x2 = tab_my.getAttribute('data-x');
                     pos_y2 = tab_my.getAttribute('data-y');
@@ -484,7 +484,8 @@ function game(){
                     {
                         UpDown = true;
                         LeftRight = false;
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         check_zanyato(pos_x1,pos_y1);
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
@@ -497,7 +498,8 @@ function game(){
                     {
                         LeftRight = true;
                         UpDown = false;
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         check_zanyato(pos_x1,pos_y1);
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
@@ -507,7 +509,7 @@ function game(){
                         game();
                     }
                 }
-                if(nameClass == "game-td" && canMove && count == 13)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count == 13&&Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x2 = tab_my.getAttribute('data-x');
                     pos_y2 = tab_my.getAttribute('data-y');
@@ -516,7 +518,8 @@ function game(){
                     if(((pos_x2 == pos_x1 -1 && pos_y2 == pos_y1) || (pos_x2 == pos_x1 +1 && pos_y2 == pos_y1)) && LeftRight)
                     {
 
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
                         game();
@@ -524,7 +527,8 @@ function game(){
                     }
                     else if(((pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1)) && UpDown)
                     {
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         check_zanyato(pos_x2,pos_y2);
 
                         count = count + 1;
@@ -545,17 +549,18 @@ function game(){
             tab_my.addEventListener('click', function () 
             {
                 let nameClass = tab_my.className;
-                if(nameClass == "game-td" && canMove && count ==14)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count ==14 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x1 = tab_my.getAttribute('data-x');
                     pos_y1 = tab_my.getAttribute('data-y');
                     pos_x1 = Number(pos_x1);
                     pos_y1 = Number(pos_y1);
-                    tab_my.className = "game-td-green";
+                    tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                     count = count + 1;
                     game();
                 }
-                if(nameClass == "game-td" && canMove && count == 15)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count == 15 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x2 = tab_my.getAttribute('data-x');
                     pos_y2 = tab_my.getAttribute('data-y');
@@ -567,7 +572,8 @@ function game(){
                     {
                         UpDown = true;
                         LeftRight = false;
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         check_zanyato(pos_x1,pos_y1);
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
@@ -580,7 +586,8 @@ function game(){
                     {
                         LeftRight = true;
                         UpDown = false;
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         check_zanyato(pos_x1,pos_y1);
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
@@ -590,7 +597,7 @@ function game(){
                         game();
                     }
                 }
-                if(nameClass == "game-td" && canMove && count == 16)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count == 16 && Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x2 = tab_my.getAttribute('data-x');
                     pos_y2 = tab_my.getAttribute('data-y');
@@ -599,7 +606,8 @@ function game(){
                     if(((pos_x2 == pos_x1 -1 && pos_y2 == pos_y1) || (pos_x2 == pos_x1 +1 && pos_y2 == pos_y1)) && LeftRight)
                     {
 
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
                         game();
@@ -607,7 +615,8 @@ function game(){
                     }
                     else if(((pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1)) && UpDown)
                     {
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
                         game();
@@ -627,17 +636,18 @@ function game(){
             tab_my.addEventListener('click', function () 
             {
                 let nameClass = tab_my.className;
-                if(nameClass == "game-td" && canMove && count ==17)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count ==17&& Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x1 = tab_my.getAttribute('data-x');
                     pos_y1 = tab_my.getAttribute('data-y');
                     pos_x1 = Number(pos_x1);
                     pos_y1 = Number(pos_y1);
-                    tab_my.className = "game-td-green";
+                    tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                     count = count + 1;
                     game();
                 }
-                if(nameClass == "game-td" && canMove && count == 18)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count == 18&& Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x2 = tab_my.getAttribute('data-x');
                     pos_y2 = tab_my.getAttribute('data-y');
@@ -649,7 +659,8 @@ function game(){
                     {
                         UpDown = true;
                         LeftRight = false;
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
                         pos_y1 = tab_my.getAttribute('data-y');
@@ -661,7 +672,8 @@ function game(){
                     {
                         LeftRight = true;
                         UpDown = false;
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
                         pos_y1 = tab_my.getAttribute('data-y');
@@ -670,7 +682,7 @@ function game(){
                         game();
                     }
                 }
-                if(nameClass == "game-td" && canMove && count == 19)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count == 19&& Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x2 = tab_my.getAttribute('data-x');
                     pos_y2 = tab_my.getAttribute('data-y');
@@ -679,7 +691,8 @@ function game(){
                     if(((pos_x2 == pos_x1 -1 && pos_y2 == pos_y1) || (pos_x2 == pos_x1 +1 && pos_y2 == pos_y1)) && LeftRight)
                     {
 
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
                         pos_y1 = tab_my.getAttribute('data-y');
@@ -690,7 +703,8 @@ function game(){
                     }
                     else if(((pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1)) && UpDown)
                     {
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
                         pos_y1 = tab_my.getAttribute('data-y');
@@ -699,7 +713,7 @@ function game(){
                         game();
                     }
                 }
-                if(nameClass == "game-td" && canMove && count == 20)
+                if(Number(tab_my.getAttribute('data-z')) == 0 && canMove && count == 20&& Number(tab_my.getAttribute('data-z')) != 4)
                 {
                     pos_x2 = tab_my.getAttribute('data-x');
                     pos_y2 = tab_my.getAttribute('data-y');
@@ -708,52 +722,90 @@ function game(){
                     if(((pos_x2 == pos_x1 -1 && pos_y2 == pos_y1) || (pos_x2 == pos_x1 +1 && pos_y2 == pos_y1)) && LeftRight)
                     {
 
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         count = count + 1;
+                        my_hod = true;
+                        attack_player();
                         
                     }
                     else if(((pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1)) && UpDown)
                     {
-                        tab_my.className = "game-td-green";
+                        tab_my.setAttribute('data-z',1);
+                    tab_my.style.background = "green";
                         count = count + 1;
+                        my_hod = true;
+                        attack_player();
                     }
                 }
             })
 
         });
     }
+}
 
 
+function attack_player()
+{
+    if(my_hod)
+    {
+        logic("Ваш ход");
+        const tabs_kill = document.querySelectorAll('.game-td2');
+        tabs_kill.forEach((tab_kill) =>
+        {
+            tab_kill.addEventListener('click', function ()
+            {
+                //console.log(Number(tab_kill.getAttribute('data-x')));
+                //console.log(Number(tab_kill.getAttribute('data-y')));
+                if(Number(tab_kill.getAttribute('data-z')) == 1 && tab_kill.style.background != "pink" && tab_kill.style.background != "red")
+                {
+                    tab_kill.style.background = "red";
+                    console.log(Number(tab_kill.getAttribute('data-x')));
+                    console.log(Number(tab_kill.getAttribute('data-y')));
+                    my_kills++;
+                    my_hod = true;
+                }
+                else if(Number(tab_kill.getAttribute('data-z')) != 1){
+                    tab_kill.style.background = "pink";
+                    my_hod = false;
+                    bot_hod = true;
+                    remove_Event();
+                    logic("Ходит бот");
+                    setInterval(attack_bot,4000);
 
+                }
+            })
+        });
+    }
+}
 
+function remove_Event()
+{
+    const tabs_kill = document.querySelectorAll('.game-td2');
+        tabs_kill.forEach((tab_kill) =>
+        {
+            tab_kill.removeEventListener('click', function ()
+            {
+                //console.log(Number(tab_kill.getAttribute('data-x')));
+                //console.log(Number(tab_kill.getAttribute('data-y')));
+                if(Number(tab_kill.getAttribute('data-z')) == 1 && tab_kill.style.background != "pink" && tab_kill.style.background != "red")
+                {
+                    tab_kill.style.background = "red";
+                    console.log(Number(tab_kill.getAttribute('data-x')));
+                    console.log(Number(tab_kill.getAttribute('data-y')));
+                    my_kills++;
+                    my_hod = true;
+                }
+                else if(Number(tab_kill.getAttribute('data-z')) != 1){
+                    tab_kill.style.background = "pink";
+                    my_hod = false;
+                    bot_hod = true;
+                    remove_Event();
+                    logic("Ходит бот");
+                    setInterval(attack_bot,4000);
 
-
-
-
-
-
-
-
-
-//Возможность атаковать
-// if(startGame && my_hod)
-// {
-//     const tabs_my = document.querySelectorAll('.game-td2');
-//     tabs_my.forEach((tab_my) =>
-//     {
-//         tab_my.addEventListener('click', function () 
-//         {
-//             const nameClass = tab_my.className;
-//             if(nameClass == "game-td2")
-//             {
-//                 tab_my.className = "game-td2-red";
-//             }
-//         })
-//         tab_my.addEventListener('click', function ()
-//         {
-            
-//         })
-//     });
-// }
+                }
+            });
+        });
 }
 

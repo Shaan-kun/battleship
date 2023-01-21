@@ -15,12 +15,17 @@
 		var my_hod = false;
 		var count_for_player = 1;
 
+		var bot_hod = false;
 
 		var pos_x1=0;
         var pos_y1=0;
 
         var pos_x2=0;
         var pos_y2=0;
+
+		var bot_kills = 0;
+		var my_kills = 0;
+
 
 		var UpDown = false;
 		var LeftRight = false;
@@ -55,5 +60,6 @@
 	<script src=  "gameLogic/game_play.js"></script>
 	<script src=  "gameLogic/game_play_2.js"></script>
 	<script src = "gameLogic/addEventListener.js"></script>
+	<script src = "gameLogic/bot_addEventListener.js"></script>
 	<script>game();//var timeAll = setInterval(logic, 100);</script>
 </body>

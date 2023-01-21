@@ -18,32 +18,31 @@
     width:300px;
 
 }
-.game-td{
+.game-td{ 
     background-color: aqua;
-    width: 30px;
-    height: 30px;
+
 }
-.game-td-green{
+/* .game-td-green{ // z=1
     background-color: green;
     width: 30px;
     height: 30px;
 }
-.game-td-red{
+.game-td-red{ //z=2
     background-color: red;
     width: 30px;
     height: 30px;
 }
-.game-td-pink{
+.game-td-pink{// z=3
     background-color: pink;
     width: 30px;
     height: 30px;
 }
 
-.game-td-zanyato{
+.game-td-zanyato{// z=4
     background-color: aqua;
     width: 30px;
     height: 30px;
-}
+} */
 
             /*                         */
             /* Правая таблица соперника*/
@@ -58,9 +57,14 @@
 }
 .game-td2{
     background-color: #00ffff;
+    width: 30px;
+    height: 30px;
 }
+
 .game-td2-red{
     background-color: red;
+    width: 30px;
+    height: 30px;
 }
 
 

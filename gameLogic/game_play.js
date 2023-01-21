@@ -15,6 +15,7 @@ function get_table()
             $td.className = "game-td";
             $td.dataset.y=y;
             $td.dataset.x=x;
+            $td.dataset.z=0;
 
             $tr.append($td);
             row.push($td);

@@ -16,6 +16,7 @@ function get_table_2() //Вторая таблица соперника
             $td.className = "game-td2";
             $td.dataset.y=y;
             $td.dataset.x=x;
+            $td.dataset.z=0;
 
             $tr.append($td);
             row.push($td);
