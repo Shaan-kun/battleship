@@ -180,11 +180,43 @@ function logic(text)
     logic();
 
 
-    var corabl_tab = 1;
+
+function check_zanyato(pos_x1,pos_y1)
+{
+    let tabs = document.querySelectorAll('.game-td');
+    tabs.forEach((tab) =>
+    {
+        let eto_x = tab.getAttribute('data-x');
+        let eto_y = tab.getAttribute('data-y');
+        if((eto_x == pos_x1+1 && eto_y == pos_y1) || (eto_x == pos_x1-1 && eto_y == pos_y1) || (eto_x == pos_x1 && eto_y == pos_y1-1) || (eto_x == pos_x1 && eto_y == pos_y1+1)
+        || (eto_x == pos_x1+1 && eto_y == pos_y1+1) || (eto_x == pos_x1-1 && eto_y == pos_y1-1) || (eto_x == pos_x1+1 && eto_y == pos_y1-1) || (eto_x == pos_x1-1 && eto_y == pos_y1+1))
+        {
+            console.log(eto_x);
+            console.log(eto_y);
+            tab.className = "game-td-zanyato";
+        }
+    });
+}
+
+// function check_zanyato2(pos_x1,pos_y1)
+// {
+//     let tabs = document.querySelectorAll('.game-td');
+//     tabs.forEach((tab) =>
+//     {
+//         let eto_x = tab.getAttribute('data-x');
+//         let eto_y = tab.getAttribute('data-y');
+//         if((eto_x == pos_x1+1 && eto_y == pos_y1) || (eto_x == pos_x1-1 && eto_y == pos_y1) || (eto_x == pos_x1 && eto_y == pos_y1-1) || (eto_x == pos_x1 && eto_y == pos_y1+1)
+//         || (eto_x == pos_x1+1 && eto_y == pos_y1+1) || (eto_x == pos_x1-1 && eto_y == pos_y1-1) || (eto_x == pos_x1+1 && eto_y == pos_y1-1) || (eto_x == pos_x1-1 && eto_y == pos_y1+1))
+//         {
+//             console.log(eto_x);
+//             console.log(eto_y);
+//             tab.className = "game-td-zanyato";
+//         }
+//     });
+// }
 
 
-
-    canMove = true;
+canMove = true;
 function game(){
     if(canMove && count ==1){
         count_for_player=1;
@@ -197,13 +229,18 @@ function game(){
                 const nameClass = tab_my.className;
                 if(nameClass == "game-td" && canMove && count ==1)
                 {   
-
+                    pos_x1 = tab_my.getAttribute('data-x');
+                    pos_y1 = tab_my.getAttribute('data-y');
+                    pos_x1 = Number(pos_x1);
+                    pos_y1 = Number(pos_y1);
                     tab_my.className = "game-td-green";
                     count = count + 1;
+                    check_zanyato(pos_x1,pos_y1);
                     game();
-
                 }
+
             })
+            
         });
     }
 
@@ -219,9 +256,13 @@ function game(){
                 const nameClass = tab_my.className;
                 if(nameClass == "game-td" && canMove && count ==2)
                 {
-
+                    pos_x1 = tab_my.getAttribute('data-x');
+                    pos_y1 = tab_my.getAttribute('data-y');
+                    pos_x1 = Number(pos_x1);
+                    pos_y1 = Number(pos_y1);
                     tab_my.className = "game-td-green";
                     count = count + 1;
+                    check_zanyato(pos_x1,pos_y1);
                     game();
 
                 }
@@ -240,9 +281,13 @@ function game(){
                 const nameClass = tab_my.className;
                 if(nameClass == "game-td" && canMove && count ==3)
                 {
-
+                    pos_x1 = tab_my.getAttribute('data-x');
+                    pos_y1 = tab_my.getAttribute('data-y');
+                    pos_x1 = Number(pos_x1);
+                    pos_y1 = Number(pos_y1);
                     tab_my.className = "game-td-green";
                     count = count + 1;
+                    check_zanyato(pos_x1,pos_y1);
                     game();
 
                 }
@@ -263,9 +308,13 @@ function game(){
                 const nameClass = tab_my.className;
                 if(nameClass == "game-td" && canMove && count ==4)
                 {
-
+                    pos_x1 = tab_my.getAttribute('data-x');
+                    pos_y1 = tab_my.getAttribute('data-y');
+                    pos_x1 = Number(pos_x1);
+                    pos_y1 = Number(pos_y1);
                     tab_my.className = "game-td-green";
                     count = count + 1;
+                    check_zanyato(pos_x1,pos_y1);
                     game();
                 }
             })
@@ -303,10 +352,13 @@ function game(){
                     pos_y2 = tab_my.getAttribute('data-y');
                     pos_x2 = Number(pos_x2);
                     pos_y2 = Number(pos_y2);
+                    
                     if((pos_x2 == pos_x1 -1 && pos_y2 == pos_y1) || (pos_x2 == pos_x1 +1 && pos_y2 == pos_y1)
                         || (pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1))
                     {
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x1,pos_y1);
+                        check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
                         game();
                     }
@@ -347,6 +399,8 @@ function game(){
                         || (pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1))
                     {
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x1,pos_y1);
+                        check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
                         game();
                     }
@@ -387,6 +441,8 @@ function game(){
                         || (pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1))
                     {
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x1,pos_y1);
+                        check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
                         game();
                     }
@@ -429,6 +485,7 @@ function game(){
                         UpDown = true;
                         LeftRight = false;
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x1,pos_y1);
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
                         pos_y1 = tab_my.getAttribute('data-y');
@@ -441,6 +498,7 @@ function game(){
                         LeftRight = true;
                         UpDown = false;
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x1,pos_y1);
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
                         pos_y1 = tab_my.getAttribute('data-y');
@@ -459,6 +517,7 @@ function game(){
                     {
 
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
                         game();
                         
@@ -466,6 +525,8 @@ function game(){
                     else if(((pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1)) && UpDown)
                     {
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x2,pos_y2);
+
                         count = count + 1;
                         game();
                     }
@@ -507,6 +568,7 @@ function game(){
                         UpDown = true;
                         LeftRight = false;
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x1,pos_y1);
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
                         pos_y1 = tab_my.getAttribute('data-y');
@@ -519,6 +581,7 @@ function game(){
                         LeftRight = true;
                         UpDown = false;
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x1,pos_y1);
                         count = count + 1;
                         pos_x1 = tab_my.getAttribute('data-x');
                         pos_y1 = tab_my.getAttribute('data-y');
@@ -537,6 +600,7 @@ function game(){
                     {
 
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
                         game();
                         
@@ -544,6 +608,7 @@ function game(){
                     else if(((pos_x2 == pos_x1 && pos_y2 == pos_y1 -1) || (pos_x2 == pos_x1 && pos_y2 == pos_y1 +1)) && UpDown)
                     {
                         tab_my.className = "game-td-green";
+                        check_zanyato(pos_x2,pos_y2);
                         count = count + 1;
                         game();
                     }

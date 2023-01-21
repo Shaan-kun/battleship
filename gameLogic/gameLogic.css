@@ -13,17 +13,36 @@
     float:left;
     position:fixed;
 }
+
+.game-tr{
+    width:300px;
+
+}
 .game-td{
     background-color: aqua;
+    width: 30px;
+    height: 30px;
 }
 .game-td-green{
     background-color: green;
+    width: 30px;
+    height: 30px;
 }
 .game-td-red{
     background-color: red;
+    width: 30px;
+    height: 30px;
 }
 .game-td-pink{
     background-color: pink;
+    width: 30px;
+    height: 30px;
+}
+
+.game-td-zanyato{
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
 }
 
             /*                         */
