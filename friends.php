@@ -71,7 +71,7 @@
             ?>
             <div class="friend-data">
                 <img src="/images/avatars/<? echo $friend['avatar'] ?>">
-                <p class="open-user-info <?= $friend['user_id']?>"><? echo $friend['login'] ?></p>
+                <p open-user-info="<?= $friend['user_id']?>"><? echo $friend['login'] ?></p>
                 <p><? echo $friend['description'] ?></p>
                 <div class="buttons">
                     <form action="/php/friends_actions.php" method="post">
@@ -115,7 +115,7 @@
             ?>
             <div class="friend-data">
                 <img src="/images/avatars/<? echo $friend['avatar'] ?>">
-                <p class="open-user-info <?= $friend['user_id']?>"><? echo $friend['login'] ?></p>
+                <p open-user-info="<?= $friend['user_id']?>"><? echo $friend['login'] ?></p>
                 <p><? echo $friend['description'] ?></p>
                 <div class="buttons">
                     <form action="/php/friends_actions.php" method="post">
