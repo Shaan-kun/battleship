@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "58ea459a-5974-49cf-9cb7-87ff483fa7a3",
+		"name": "Battleship API V 2.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23407017"
+	},
+	"item": [
+		{
+			"name": "Игры",
+			"item": [
+				{
+					"name": "Создать игру",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://battleship/php/game/game",
+							"protocol": "http",
+							"host": [
+								"battleship"
+							],
+							"path": [
+								"php",
+								"game",
+								"game"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Присоединиться к игре",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"game_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://battleship/php/game/game",
+							"protocol": "http",
+							"host": [
+								"battleship"
+							],
+							"path": [
+								"php",
+								"game",
+								"game"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Список доступных игр",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://battleship/php/game/game",
+							"protocol": "http",
+							"host": [
+								"battleship"
+							],
+							"path": [
+								"php",
+								"game",
+								"game"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Данные игры",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://battleship/php/game/game?game_id=1",
+							"protocol": "http",
+							"host": [
+								"battleship"
+							],
+							"path": [
+								"php",
+								"game",
+								"game"
+							],
+							"query": [
+								{
+									"key": "game_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Данные всех пользователей",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://battleship/php/game/user",
+					"protocol": "http",
+					"host": [
+						"battleship"
+					],
+					"path": [
+						"php",
+						"game",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Данные пользователя",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://battleship/php/game/user?user_id=1",
+					"protocol": "http",
+					"host": [
+						"battleship"
+					],
+					"path": [
+						"php",
+						"game",
+						"user"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Расставить корабли",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"player_id\": 1,\r\n    \"ships\": [\r\n        [\r\n            {\r\n                \"axis_x\": \"А\",\r\n                \"axis_y\": \"1\"\r\n            }\r\n        ],\r\n        [\r\n            {\r\n                \"axis_x\": \"А\",\r\n                \"axis_y\": \"1\"\r\n            },\r\n            {\r\n                \"axis_x\": \"Б\",\r\n                \"axis_y\": \"1\"\r\n            }\r\n        ]\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://battleship/php/game/ship",
+					"protocol": "http",
+					"host": [
+						"battleship"
+					],
+					"path": [
+						"php",
+						"game",
+						"ship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Корабли игрока",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://battleship/php/game/ship?player_id=1",
+					"protocol": "http",
+					"host": [
+						"battleship"
+					],
+					"path": [
+						"php",
+						"game",
+						"ship"
+					],
+					"query": [
+						{
+							"key": "player_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Выстрелы игрока",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://battleship/php/game/shot?player_id=1",
+					"protocol": "http",
+					"host": [
+						"battleship"
+					],
+					"path": [
+						"php",
+						"game",
+						"shot"
+					],
+					"query": [
+						{
+							"key": "player_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ID игрока",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://battleship/php/game/player?user_id=1&game_id=1",
+					"protocol": "http",
+					"host": [
+						"battleship"
+					],
+					"path": [
+						"php",
+						"game",
+						"player"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						},
+						{
+							"key": "game_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Выстрел",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"player_id\": 1,\r\n    \"axis_x\": \"Б\",\r\n    \"axis_y\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://battleship/php/game/shot",
+					"protocol": "http",
+					"host": [
+						"battleship"
+					],
+					"path": [
+						"php",
+						"game",
+						"shot"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
