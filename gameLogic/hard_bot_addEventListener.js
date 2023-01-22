@@ -151,12 +151,19 @@ function attack_bot()
                 }
                 else if(Number(tab.getAttribute('data-z')) != 1 && tab.style.background != "pink" && tab.style.bakground != "red")
                 {
+                    if(skip_count >=2)
+                    {
+                        skip_count =0;
+                        setInterval(attack_bot,4000);
+                    }
+                    else{                   
                     skip_count++;
                     tab.style.background = "pink";
                     bot_hod = false;
                     logic("Ваш ход");
                     setInterval(attack_player,4000);
                     my_hod = true;
+                    }
 
                     
                 }

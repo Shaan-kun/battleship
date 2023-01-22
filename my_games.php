@@ -8,7 +8,9 @@
 
 <form>
 	<h3>Создать свободную игру</h3>
-	<a href = "game_play.php">Создать игру</a>
+	<a href = "game_play.php">Создать одиночную игру с лёгким ботом</a>
+	</br>
+	<a href = "hard_game_play.php">Создать одиночную игру с сильным ботом</a>
 </form>
 <h2>Список моих игр</h2>
 <table class="table">
