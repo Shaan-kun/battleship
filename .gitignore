@@ -1,2 +1,4 @@
-images/avatars/*.*
+images/avatars/*
 !images/avatars/user.png
+
+chat.json
