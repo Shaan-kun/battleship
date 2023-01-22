@@ -94,6 +94,7 @@ h2 {
 */
 
 aside {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -102,6 +103,16 @@ aside {
 .nickname {
 	font-size: 24px;
 	font-weight: 700;
+}
+
+.setting-button {
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(/images/setting.png);
+    background-size: contain;
+    right: 20px;
+	cursor: pointer;
 }
 
 .games, .game-data {
@@ -238,7 +249,7 @@ body {
 }
 
 .chat {
-	max-width: 150px;
+	max-width: 100%;
 	max-height: 350px;
 	overflow: auto;
 }
@@ -263,10 +274,15 @@ body {
 	color: #5577dd;
 }
 
+.send-message {
+	display: inherit;
+}
+
 .message-text {
 	margin: 2px;
 	font-size: 14px;
 	font-weight: 800;
+	word-break: break-word;
 }
 
 input[type="text"] {
@@ -278,6 +294,97 @@ input[type="text"] {
 
 input[type="submit"] {
 	float: right;
-	width: 10%;
+	width: auto;
 	padding: 5px;
+}
+
+/*
+	======================
+	Настройки пользователя
+	======================
+*/
+
+.setting-window {
+	display: flex;
+	position: fixed;
+    top: 0;
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+}
+
+.setting-window > form {
+	overflow-y: auto;
+	display: flex;
+    flex-direction: column;
+	background-color: #111115;
+	border: 1px solid black;
+	padding: 10px 30px;
+	margin: auto;
+}
+
+.setting-window p {
+	margin: 5px;
+	text-align: center;
+}
+
+.hide {
+	display: none;
+}
+
+/*
+	====================
+	Профиль пользователя
+	====================
+*/
+
+.user-info-window {
+	text-align: center;
+    padding: 10px;
+    background: #111115;
+    border: 1px solid black;
+    position: fixed;
+	top: 0;
+	width: 500px;
+}
+
+.user-info-window img {
+	width: 150px;
+}
+
+.user-stat {
+	display: flex;
+	justify-content: space-around;
+}
+
+.friends-link {
+	color: unset;
+}
+
+.friends-container {
+	display: flex;
+}
+
+.friends-data {
+	width: 30%;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid black
+}
+
+.friends-data img {
+	width: 100px;
+    max-height: 100px;
+}
+
+.friend-find {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.buttons {
+	display: flex;
+}
+.buttons form {
+	margin: auto;
 }

@@ -6,10 +6,12 @@ function get_rating(users)
     for(let user of users)
     {
         const $tr = document.createElement('tr');
-
+        
         for (let field in user)
         {
             let $td = document.createElement('td');
+            $td.setAttribute('open-user-info', user['user_id']);
+
             $td.textContent = user[field];
 
             $tr.append($td);
