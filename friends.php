@@ -16,7 +16,7 @@
     $friends_string = implode(', ', $friends);
 
     $friends = [];
-    $r = mysqli_query($connect, "SELECT `user_id`, `login`, `reg_date`, `avatar`, `description`, `game_count`, `game_win`, `game_loss`, `score` FROM `user` WHERE `user_id` IN ({$friends_string})");
+    $r = mysqli_query($connect, "SELECT `user_id`, `login`, `reg_date`, `avatar`, `description`, `game_count`, `game_win`, `game_loss`, `score` FROM `user` WHERE `user_id` IN (0, {$friends_string})");
     if ($r->num_rows > 0) {
         while ($row = mysqli_fetch_assoc($r)) {
             array_push($friends, $row);
@@ -33,7 +33,7 @@
     $out_requests_string = implode(', ', $outcoming_requests);
 
     $outcoming_requests = [];
-    $r = mysqli_query($connect, "SELECT `user_id`, `login`, `reg_date`, `avatar`, `description`, `game_count`, `game_win`, `game_loss`, `score` FROM `user` WHERE `user_id` IN ({$out_requests_string})");
+    $r = mysqli_query($connect, "SELECT `user_id`, `login`, `reg_date`, `avatar`, `description`, `game_count`, `game_win`, `game_loss`, `score` FROM `user` WHERE `user_id` IN (0, {$out_requests_string})");
     if ($r->num_rows > 0) {
         while ($row = mysqli_fetch_assoc($r)) {
             array_push($outcoming_requests, $row);
@@ -50,7 +50,7 @@
     $in_requests_string = implode(', ', $incoming_requests);
 
     $incoming_requests = [];
-    $r = mysqli_query($connect, "SELECT `user_id`, `login`, `reg_date`, `avatar`, `description`, `game_count`, `game_win`, `game_loss`, `score` FROM `user` WHERE `user_id` IN ({$in_requests_string})");
+    $r = mysqli_query($connect, "SELECT `user_id`, `login`, `reg_date`, `avatar`, `description`, `game_count`, `game_win`, `game_loss`, `score` FROM `user` WHERE `user_id` IN (0, {$in_requests_string})");
     if ($r->num_rows > 0) {
         while ($row = mysqli_fetch_assoc($r)) {
             array_push($incoming_requests, $row);
