@@ -221,7 +221,7 @@ footer {
 */
 
 .chat {
-	max-width: 100%;
+	max-width: 150px;
 	max-height: 350px;
 	overflow: auto;
 }
@@ -247,13 +247,13 @@ footer {
 
 .send-message {
 	display: inherit;
+	word-break: break-word;
 }
 
 .message-text {
 	margin: 2px;
 	font-size: 14px;
 	font-weight: 800;
-	word-break: break-word;
 }
 
 input[type="text"] {
@@ -355,6 +355,9 @@ input[type="submit"] {
 .buttons {
 	display: flex;
 }
+
 .buttons form {
 	margin: auto;
+	width: 10%;
+	padding: 5px;
 }

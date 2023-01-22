@@ -1,8 +1,7 @@
 function get_table()
 {
-    cells = []; // тут все ячейки в таблице
     const $tableBody = document.createElement('tbody');
-    $tableBody.className = "game-tbody_2";
+    $tableBody.className = "game-tbody";
 
     for(let y = 0; y<10;y++)
     {
@@ -16,6 +15,7 @@ function get_table()
             $td.className = "game-td";
             $td.dataset.y=y;
             $td.dataset.x=x;
+            $td.dataset.z=0;
 
             $tr.append($td);
             row.push($td);
@@ -52,7 +52,10 @@ function get_table()
 
 }
 function update_table() {
-		let tbody = document.querySelector(".game-tbody_2");
+		let tbody = document.querySelector(".game-tbody");
 		tbody.replaceWith(get_table());
 	};
+
+
 update_table();
+

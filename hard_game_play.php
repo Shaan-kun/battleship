@@ -59,7 +59,7 @@
 	</div>
 	<script src=  "gameLogic/game_play.js"></script>
 	<script src=  "gameLogic/game_play_2.js"></script>
-	<script src = "gameLogic/addEventListener.js"></script>
-	<script src = "gameLogic/bot_addEventListener.js"></script>
-	<script>game();//var timeAll = setInterval(logic, 100);</script>
+	<script src = "gameLogic/hard_addEventListener.js"></script>
+	<script src = "gameLogic/hard_bot_addEventListener.js"></script>
+    <script>game();//var timeAll = setInterval(logic, 100);</script>
 </body>

@@ -1,0 +1,180 @@
+
+
+            /*                     */
+            /* Левая таблица игрока*/
+            /*                     */
+
+
+.table_1{
+    margin-top: 150px;
+    margin-left: 180px;
+    width: 300px;
+    height: 300px;
+    float:left;
+    position:fixed;
+}
+
+.game-tr{
+    width:300px;
+
+}
+.game-td{ 
+    background-color: aqua;
+
+}
+/* .game-td-green{ // z=1
+    background-color: green;
+    width: 30px;
+    height: 30px;
+}
+.game-td-red{ //z=2
+    background-color: red;
+    width: 30px;
+    height: 30px;
+}
+.game-td-pink{// z=3
+    background-color: pink;
+    width: 30px;
+    height: 30px;
+}
+
+.game-td-zanyato{// z=4
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+} */
+
+            /*                         */
+            /* Правая таблица соперника*/
+            /*                         */
+.table_2{
+    margin-top: 150px;
+    margin-right: 100px;
+    width: 300px;
+    height: 300px;
+    float:right;
+
+}
+.game-td2{
+    background-color: #00ffff;
+    width: 30px;
+    height: 30px;
+}
+
+.game-td2-red{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+            /*        */
+            /* Маркеры*/
+            /*        */
+
+
+.container_table_1{
+    position: fixed;
+}
+
+.container_table_2{
+    position: fixed;
+    right: 0;
+}
+
+
+.game-td{
+    width: 30px;
+    height: 30px;
+
+}
+.game-td2{
+    width: 30px;
+    height: 30px;
+}
+
+.marker-row {
+    text-align: center;
+    margin-left: -25px;
+    margin-top: 10px;
+    width: 20px;
+}
+
+.marker-column {
+    text-align: center;
+    margin-top: -50px;
+}
+
+
+
+.my_info{
+    color:darkmagenta;
+    width:100px;
+    float:left;
+}
+.vrag_info{
+    float:right;
+    color: darkmagenta;
+}
+.wait{
+    position:absolute;
+    left: 400px;
+    bottom: 600px;
+    text-align: center;
+    color:darkmagenta;
+    font-size: 20px;
+}
+
+.aqua{
+    background-color: aqua;
+}
+
+.green{
+    background-color: green;
+}
+
+
+
+.instukciya-1{
+    width: 30px;
+    height: 15px;
+    background-color: aqua;
+    font-size: 14px;
+    color:white;
+}
+.instukciya-2{
+    width: 90px;
+    height: 20px;
+    background-color: green;
+    font-size: 14px;
+    color:white;
+}
+.instukciya-3{
+    width: 70px;
+    height: 15px;
+    background-color: red;
+    font-size: 14px;
+    color:white;
+}
+.instukciya-4{
+    width: 50px;
+    height: 15px;
+    background-color: pink;
+    font-size: 14px;
+    color:white;
+}
+/*
+
+.table_2{
+    margin-top: 100px;
+    margin-left: 400px;
+    vertical-align: top;
+}
+
+.table_second{
+    float: right;
+}
+
+*/
