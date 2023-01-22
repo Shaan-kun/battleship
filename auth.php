@@ -32,7 +32,7 @@
             Забыли пароль? Нажмите <a href="password_recovery.php">сюда</a>!
         </p>
         <?php
-            if ($_SESSION['message'])
+            if (isset($_SESSION['message']))
             {
                 echo '<p class="msg">' . $_SESSION['message'] . '</p>';
             }

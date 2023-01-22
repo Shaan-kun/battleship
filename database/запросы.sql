@@ -63,6 +63,13 @@ CREATE TABLE Shot (
 	UNIQUE(player_id, axis_x, axis_y)
 );
 
+CREATE TABLE `friendship` (
+	`friendship_sender` int NOT NULL,
+	`friendship_recipient` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+ALTER TABLE `friendship` ADD UNIQUE KEY `friendship` (`friendship_sender`,`friendship_recipient`) USING BTREE;
+
 INSERT INTO
 	Type(name, hp)
 VALUES
